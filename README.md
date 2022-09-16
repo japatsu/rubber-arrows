@@ -11,6 +11,8 @@ In your Foundry VTT
 
 # Features
 
+Read on to find out what it does and how you use the tool.
+
 ## Easy
 
 Activate the tool, left-click and start dragging, and there's your pointer. Release the button and it's gone. That's it.
