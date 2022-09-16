@@ -1,71 +1,48 @@
-![](https://img.shields.io/badge/Foundry-v0.8.6-informational)
-<!--- Downloads @ Latest Badge -->
-<!--- replace <user>/<repo> with your username/repository -->
-<!--- ![Latest Release Download Count](https://img.shields.io/github/downloads/<user>/<repo>/latest/module.zip) -->
+# Rubber Arrows - a Foundry VTT Module
 
-<!--- Forge Bazaar Install % Badge -->
-<!--- replace <your-module-name> with the `name` in your manifest -->
-<!--- ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2F<your-module-name>&colorB=4aa94a) -->
+A stretching arrow that you can use to point out details, routes, and other important things on the screen to your fellow players.
 
+# Installation
 
-# How to use this Template to create a versioned Release
+In your Foundry VTT 
+- Navigate to `Configuration and Setup screen -> Add-on Modules -> Install Module`
+- For `Manifest URL`, put in: `https://github.com/japatsu/rubber-arrows/releases/latest/module.json`
+- Click `Install`
 
-1. Open your repository's releases page.
+# Features
 
-![Where to click to open repository releases.](https://user-images.githubusercontent.com/7644614/93409301-9fd25080-f864-11ea-9e0c-bdd09e4418e4.png)
+## Easy
 
-2. Click "Draft a new release"
+Activate the tool, left-click and start dragging, and there's your pointer. Release the button and it's gone. That's it.
 
-![Draft a new release button.](https://user-images.githubusercontent.com/7644614/93409364-c1333c80-f864-11ea-89f1-abfcb18a8d9f.png)
+The tool activates from the controls menu or with a hot-key (see below).
 
-3. Fill out the release version as the tag name.
+## Waypoints
 
-If you want to add details at this stage you can, or you can always come back later and edit them.
+You can choose to go with simple, straight arrows, or get fancy with multi-segmented, angled arrows suitable for route marking.
 
-![Release Creation Form](https://user-images.githubusercontent.com/7644614/93409543-225b1000-f865-11ea-9a19-f1906a724421.png)
+While drawing the arrow, right-click starts a new segment. 
 
-4. Hit submit.
+## Hot-key toggle
 
-5. Wait a few minutes.
+When the hot-key is pressed, Rubber Arrow tool activates. It stays active until the hot-key gets released, and then the previous tool is re-activated automatically. 
 
-A Github Action will run to populate the `module.json` and `module.zip` with the correct urls that you can then use to distribute this release. You can check on its status in the "Actions" tab.
+Using the hot-key removes the need to search for the tool - and when you're done, it zeroes the clicks you need to get back where you were.
 
-![Actions Tab](https://user-images.githubusercontent.com/7644614/93409820-c1800780-f865-11ea-8c6b-c3792e35e0c8.png)
+The default hot-key is `LeftShift`. You can change it to your liking from `Game settings -> Configure Controls -> Rubber Arrows`.
 
-6. Grab the module.json url from the release's details page.
+If you, for some reason, rather use the tool menu, you can find Rubber Arrows from there too.
 
-![image](https://user-images.githubusercontent.com/7644614/93409960-10c63800-f866-11ea-83f6-270cc5d10b71.png)
+## Customizable
 
-This `module.json` will only ever point at this release's `module.zip`, making it useful for sharing a specific version for compatibility purposes.
+As a GM user you can change the overall behavior of the tool and the appereance of the arrows.
 
-7. You can use the url `https://github.com/<user>/<repo>/releases/latest/download/module.json` to refer to the manifest.
+Take a look at `Game settings -> Configure Settings -> Rubber Arrows`. 
 
-This is the url you want to use to install the module typically, as it will get updated automatically.
+Available options should be quite self-explaining. Try tinkering with them and see if what happens.
 
-# How to List Your Releases on Package Admin
+# Changelog
 
-To request a package listing for your first release, go to the [Package Submission Form](https://foundryvtt.com/packages/submit) (accessible via a link at the bottom of the "[Systems and Modules](https://foundryvtt.com/packages/)" page on the Foundry website).
+## v1.0.1 - Initial version
 
-Fill in the form. "Package Name" must match the name in the module manifest.  Package Title will be the display name for the package.  Package URL should be your repo URL.
-![image](https://user-images.githubusercontent.com/36359784/120664263-b49e5500-c482-11eb-9126-af7006389903.png)
-
-
-One of the Foundry staff will typically get back to you with an approval or any further questions within a few days, and give you access to the package admin pages.
-
-Once you have access to the [module admin page](https://foundryvtt.com/admin/packages/package/), you can release a new version by going into the page for your module, scrolling to the bottom, and filling in a new Package Version.
-
-When listing a new version, Version should be the version number you set above, and the Manifest URL should be the manifest __for that specific version__ (do not use /latest/ here).
-![image](https://user-images.githubusercontent.com/36359784/120664346-c4b63480-c482-11eb-9d8b-731b50d70939.png)
-
-> ### :warning: Important :warning:
-> 
-> It is very important that you use the specific release manifest url, and not the `/latest` url here. For more details about why this is important and how Foundry Installs/Updates packages, read [this wiki article](https://foundryvtt.wiki/en/development/guides/releases-and-history).
-
-Clicking "Save" in the bottom right will save the new version, which means that anyone installing your module from within Foundry will get that version, and a post will be generated in the #release-announcements channel on the official Foundry VTT Discord.
-
-
-# FoundryVTT Module
-
-Does something, probably
-
-## Changelog
+No comments.
