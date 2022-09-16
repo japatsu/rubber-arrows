@@ -4,7 +4,7 @@
   "description": "Elastic arrows for quickly pointing out things, directions and routes on canvas.",
   "version": "This is auto replaced",
   "library": "false",
-  "manifestPlusVersion": "1.0.0",
+  "manifestPlusVersion": "1.2.0",
   "compatibility": {
     "minimum": 10,
     "verified": 10,
@@ -22,5 +22,6 @@
   "manifest": "This is auto replaced",
   "download": "This is auto replaced",
   "license": "LICENSE",
-  "readme": "README.md"
+  "readme": "README.md",
+  "socket": true
 }
