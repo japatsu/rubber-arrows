@@ -5,8 +5,8 @@ A stretching arrow that you can use to point out details, routes, and other impo
 # Installation
 
 In your Foundry VTT 
-- Navigate to `Configuration and Setup screen -> Add-on Modules -> Install Module`
-- For `Manifest URL`, put in: `https://github.com/japatsu/rubber-arrows/releases/latest/module.json`
+- Navigate to `Configuration and Setup -> Add-on Modules -> Install Module`
+- For `Manifest URL`, put in: `https://github.com/japatsu/rubber-arrows/releases/latest/download/module.json`
 - Click `Install`
 
 # Features
