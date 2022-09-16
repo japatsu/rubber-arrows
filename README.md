@@ -41,7 +41,7 @@ As a GM user you can change the overall behavior of the tool and the appereance 
 
 Take a look at `Game settings -> Configure Settings -> Rubber Arrows`. 
 
-Available options should be quite self-explaining. Try tinkering with them and see if what happens.
+Available options should be quite self-explaining. Try tinkering with them and see what happens.
 
 # Changelog
 
