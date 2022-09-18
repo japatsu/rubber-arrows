@@ -5,3 +5,4 @@ export const SOCKET_EVENT_ADD = 1
 export const SOCKET_EVENT_UPDATE = 2
 export const SOCKET_EVENT_REMOVE = 3
 export const LAYER_NAME = 'rubberarrows'
+export const TOOL_NAME = 'rubberarrow'

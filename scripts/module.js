@@ -1,7 +1,7 @@
 import ArrowManager from './ArrowManager.js'
 import ArrowsLayer from './ArrowsLayer.js'
 import ArrowSettings from './ArrowSettings.js'
-import { LAYER_NAME } from './Constants.js'
+import { LAYER_NAME, TOOL_NAME } from './Constants.js'
 
 Hooks.on('init', function () {
     game.rubberarrowmanager = new ArrowManager()
@@ -16,10 +16,10 @@ Hooks.on('getSceneControlButtons', (controls) => {
         title: 'Pointer Controls',
         icon: 'fas fa-mouse-pointer',
         layer: LAYER_NAME,
-        activeTool: 'arrow',
+        activeTool: TOOL_NAME,
         tools: [
             {
-                name: 'arrow',
+                name: TOOL_NAME,
                 title: 'Rubber arrow',
                 icon: 'fas fa-mouse-pointer',
             },
@@ -40,4 +40,8 @@ Hooks.on('canvasInit', () => {
         enumerable: false,
     })
     canvas.interface.addChild(canvas[LAYER_NAME])
+})
+
+Hooks.on('canvasReady', () => {
+    if (game.activeTool === TOOL_NAME) canvas[LAYER_NAME].activate()
 })
