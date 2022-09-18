@@ -8,6 +8,12 @@ export default class ArrowsLayer extends InteractionLayer {
     _arrowManager = null
 
     _arrowCollection = null
+    _isDrawing = false
+
+    // Instance-bound event handlers
+    _mouseMoveHandler = null
+    _mouseDownHandler = null
+    _mouseUpHandler = null
 
     constructor(arrowManager) {
         super()
@@ -27,8 +33,27 @@ export default class ArrowsLayer extends InteractionLayer {
         return this._arrowCollection
     }
 
-    async _onDragLeftStart(event) {
-        let arrowColor = Color.from(game.user.color)
+    activate() {
+        super.activate()
+        this._mouseDownHandler = this._onMouseDown.bind(this)
+        canvas.stage.on('mousedown', this._mouseDownHandler)
+        this._mouseMoveHandler = this._onMouseMove.bind(this)
+        this._mouseUpHandler = this._onMouseUp.bind(this)
+    }
+
+    deactivate() {
+        super.deactivate()
+        canvas.stage.off('mousemove', this._mouseMoveHandler)
+        canvas.stage.off('mousedown', this._mouseDownHandler)
+        canvas.stage.off('mouseup', this._mouseUpHandler)
+    }
+
+    _onMouseDown(event) {
+        canvas.stage.on('mouseup', this._mouseUpHandler)
+        this._isDrawing = true
+
+        const arrowPosition = canvas.canvasCoordinatesFromClient(event.data.global)
+        const arrowColor = Color.from(game.user.color)
 
         let arrowThickness = ArrowSettings.thickness
         const relativeThickness = ArrowSettings.relativeThickness
@@ -45,33 +70,46 @@ export default class ArrowsLayer extends InteractionLayer {
             color: arrowColor,
             thickness: arrowThickness,
             opacity: ArrowSettings.opacity,
-            points: [event.data.destination],
+            points: [arrowPosition],
         }
         this._arrowCollection.addArrow(arrowConfig)
+
+        canvas.stage.on('mousemove', this._mouseMoveHandler)
         this._arrowManager.broadcastArrowAdded(arrowConfig)
     }
 
-    _onDragLeftMove(event) {
+    _onMouseUp(event) {
+        // Overriding InteractionLayer._onClick would cause "sticky" arrows.
+        canvas.stage.off('mouseup', this._mouseUpHandler)
+        this._arrowCollection.removeArrowByUserId(game.user.id)
+        canvas.stage.off('mousemove', this._mouseMoveHandler)
+        this._isDrawing = false
+        this._arrowManager.broadcastArrowRemoved({ userId: game.user.id })
+        event.stopPropagation()
+    }
+
+    _onMouseMove(event) {
+        if (!this._isDrawing) return
         const arrow = this._arrowCollection.getArrowByUserId(game.user.id)
+        const arrowPosition = canvas.canvasCoordinatesFromClient(event.data.global)
         if (!arrow) return
-        arrow.stretchTo(event.data.destination)
+        arrow.stretchTo(arrowPosition)
         this._arrowManager._debouncedBroadcastArrowUpdated(arrow.data)
     }
 
     _onDragLeftCancel(event) {
+        // This works fine for detecting right clicks during drag.
+        // Pixi event system seems to ignore them for some reason.
         if (event.button === 2) {
-            // Prevent right click to keep on dragging.
+            // Prevent right click from canceling dragging.
             event.preventDefault()
             if (!ArrowSettings.segmentsAllowed) return
             const arrow = this._arrowCollection.getArrowByUserId(game.user.id)
             if (!arrow) return
             const mousePos = canvas.canvasCoordinatesFromClient(event)
             arrow.addWaypointTo(mousePos)
-            // No need to broadcast this, moving the mouse will take care of it.
-        } else {
-            this._arrowCollection.removeArrowByUserId(game.user.id)
-            this._arrowManager.broadcastArrowRemoved({ userId: game.user.id })
-        }
+            // No need to broadcast this, next _onMouseMove will take care of it.
+        } 
     }
 
     static get layerOptions() {
