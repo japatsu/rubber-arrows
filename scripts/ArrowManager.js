@@ -7,7 +7,8 @@ import {
     SOCKET_EVENT_ADD,
     SOCKET_EVENT_UPDATE,
     SOCKET_EVENT_REMOVE,
-    LAYER_NAME
+    LAYER_NAME,
+    TOOL_NAME
 } from './Constants.js'
 
 export default class ArrowManager {
@@ -67,7 +68,7 @@ export default class ArrowManager {
                 self._isDrawing = true
                 self._previousLayer = canvas.activeLayer.options.name
                 self._previousTool = game.activeTool
-                await self._activateLayer(LAYER_NAME, 'arrow')
+                await self._activateLayer(LAYER_NAME, TOOL_NAME)
             },
             onUp: async () => {
                 const arrow = game.canvas[LAYER_NAME]?.arrowCollection?.getArrowByUserId(game.user.id)

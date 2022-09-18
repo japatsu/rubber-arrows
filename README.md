@@ -6,12 +6,11 @@ A stretching arrow that you can use to point out details, routes, and other impo
 
 In your Foundry VTT 
 - Navigate to `Configuration and Setup -> Add-on Modules -> Install Module`
-- For `Manifest URL`, put in: `https://github.com/japatsu/rubber-arrows/releases/latest/download/module.json`
+- For *Manifest URL* enter: `https://github.com/japatsu/rubber-arrows/releases/latest/download/module.json`
 - Click `Install`
 
 # Features
 
-Read on to find out what it does and how you use the tool.
 
 ## Easy
 
@@ -45,6 +44,14 @@ Available options should be quite self-explaining. Try tinkering with them and s
 
 # Changelog
 
-## v1.0.1 - Initial version
+## v1.1.1
 
-No comments.
+Fixed issue of tool getting inactive after a scene change. 
+## v1.1.0
+
+Improved arrow drawing accuracy.
+
+## v1.0.1
+
+Initial version
+
