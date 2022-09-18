@@ -1,10 +1,13 @@
-# Rubber Arrows - a Foundry VTT Module
+# Rubber Arrows - Foundry VTT Module
 
 A stretching arrow that you can use to point out details, routes, and other important things on the screen to your fellow players.
 
+Tested (only) with Foundry VTT v10.
+
 # Installation
 
-In your Foundry VTT 
+In your Foundry VTT,
+
 - Navigate to `Configuration and Setup -> Add-on Modules -> Install Module`
 - For *Manifest URL* enter: `https://github.com/japatsu/rubber-arrows/releases/latest/download/module.json`
 - Click `Install`
@@ -46,7 +49,8 @@ Available options should be quite self-explaining. Try tinkering with them and s
 
 ## v1.1.1
 
-Fixed issue of tool getting inactive after a scene change. 
+Fixed issue of tool getting inactive after a scene change.
+
 ## v1.1.0
 
 Improved arrow drawing accuracy.
