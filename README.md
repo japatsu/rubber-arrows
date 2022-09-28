@@ -22,7 +22,7 @@ In your Foundry VTT,
 
 ## Easy
 
-Activate the tool, left-click and start dragging, and there's your pointer. Release the button and it's gone. That's it.
+Activate the tool, press and hold left mouse button and start dragging - and there's your pointer! Release the button and it's gone. That's it.
 
 The tool activates from the controls menu or with a hot-key (see below).
 
@@ -34,13 +34,13 @@ While drawing an arrow, right-click starts a new segment.
 
 ## Hot-key toggle
 
-Optionally Rubber Arrow tool activate via a hot-key. The tool stays active until the hot-key is released, and then the previous tool is re-activated automatically. 
+Rubber Arrow tool can be activated via a hot-key. The tool stays active until the hot-key is released. The previous tool is re-activated automatically. 
 
 Using the hot-key removes the need to search for the tool from the menus. And when you're done, this feature zeroes the clicks you need to get back where you were.
 
 The default hot-key is `LeftShift`. You can change it to your liking from `Game settings -> Configure Controls -> Rubber Arrows`.
 
-If you, for some reason, rather use the tool menu (on the left), you can find Rubber Arrows from there too.
+If you, for some reason, rather use the tool from the controls menu, you can find Rubber Arrows from there too.
 
 ## Customizable
 
