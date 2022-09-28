@@ -40,6 +40,8 @@ Using the hot-key removes the need to search for the tool from the menus. And wh
 
 The default hot-key is `LeftShift`. You can change it to your liking from `Game settings -> Configure Controls -> Rubber Arrows`.
 
+![configure_controls](https://user-images.githubusercontent.com/61741172/192744985-4fa4fcb6-f036-4d35-9c78-61038be3c0b3.png)
+
 If you, for some reason, rather use the tool from the controls menu, you can find Rubber Arrows from there too.
 
 ## Customizable
@@ -49,6 +51,8 @@ As a GM user you can change the overall behavior of the tool and the appereance 
 Take a look at `Game settings -> Configure Settings -> Rubber Arrows`. 
 
 Available options should be quite self-explaining. Try tinkering with them and see what happens.
+
+![configure_settings](https://user-images.githubusercontent.com/61741172/192745010-b018fa29-397b-46f6-ae78-a511e529a55d.png)
 
 # Changelog
 
