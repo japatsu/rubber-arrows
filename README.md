@@ -1,10 +1,10 @@
 # Rubber Arrows - Foundry VTT Module
 
-A stretching arrow that you can use to point out important things on the screen to your fellow players.
+A stretching arrow that you can use for pointing out important things to your fellow players.
 
 ![rubber_arrows_straight](https://user-images.githubusercontent.com/61741172/192741146-9256eafa-8982-4bb4-aa1b-e0da7e433124.gif)
 
-Also supports angled arrows for marking routes and paths.
+Also supports segmented arrows for marking routes and paths with changing direction.
 
 ![rubber_arrows_angled](https://user-images.githubusercontent.com/61741172/192741020-376c7b59-3d76-42bc-be48-f08c36641954.gif)
 
@@ -17,6 +17,7 @@ In your Foundry VTT,
 - Navigate to `Configuration and Setup -> Add-on Modules -> Install Module`
 - For *Manifest URL*, enter: `https://github.com/japatsu/rubber-arrows/releases/latest/download/module.json`
 - Click `Install`
+- Enable the module in your game world (`Configuration -> Manage Modules`).
 
 # Features
 
@@ -32,17 +33,17 @@ You can choose to go with simple, straight arrows, or get fancy with multi-segme
 
 While drawing an arrow, right-click starts a new segment. 
 
-## Hot-key toggle
+## Hot-key
 
-Rubber Arrow tool can be activated via a hot-key. The tool stays active until the hot-key is released. The previous tool is re-activated automatically. 
+Rubber Arrow tool can be activated via a hot-key which removes the need to search for correct tools from the controls menu.
 
-Using the hot-key removes the need to search for the tool from the menus. And when you're done, this feature zeroes the clicks you need to get back where you were.
+The arrow tool stays active until the hot-key is released. Previous tool gets re-activated automatically. 
 
-The default hot-key is `LeftShift`. You can change it to your liking from `Game settings -> Configure Controls -> Rubber Arrows`.
+The default hot-key is `ShiftLeft`. You can change it to your liking from `Game settings -> Configure Controls -> Rubber Arrows`.
 
 ![configure_controls](https://user-images.githubusercontent.com/61741172/192744985-4fa4fcb6-f036-4d35-9c78-61038be3c0b3.png)
 
-If you, for some reason, rather use the tool from the controls menu, you can find Rubber Arrows from there too.
+If you still rather use the tool from the controls menu, you can find it from there too.
 
 ## Customizable
 
@@ -50,7 +51,9 @@ As a GM user you can change the overall behavior of the tool and the appereance 
 
 Take a look at `Game settings -> Configure Settings -> Rubber Arrows`. 
 
-Available options should be quite self-explaining. Try tinkering with them and see what happens.
+Available options should be quite self-explanatory. Try tinkering with the settings and see what happens.
+
+Note: the color of arrows comes directly from the Foundry's `Player Color` setting (available e.g. via `Players (list) -> <right click player> -> User Configuration`).
 
 ![configure_settings](https://user-images.githubusercontent.com/61741172/192745010-b018fa29-397b-46f6-ae78-a511e529a55d.png)
 
