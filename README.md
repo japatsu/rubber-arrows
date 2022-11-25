@@ -8,6 +8,8 @@ Also supports segmented arrows for marking routes and paths with changing direct
 
 ![rubber_arrows_angled](https://user-images.githubusercontent.com/61741172/192741020-376c7b59-3d76-42bc-be48-f08c36641954.gif)
 
+Background map seen in the previews is done by the awesome [Dyson Logos](https://dysonlogos.blog).
+
 # Installation
 
 **Notice:** Rubber Arrows is tested (only) with **Foundry VTT V10**.
